@@ -8,10 +8,12 @@ const BoxDisplay = (props) => {
 					key={index}
 					style={{
 						backgroundColor: color,
-						width: "20px",
-						height: "20px",
+						width: "60px",
+						height: "60px",
 						display: "inline-block",
-						marginRight: "10px"
+						marginRight: "10px",
+						padding: "20px",
+						marginTop: "10px"
 					}}
 				>
 				</div>
