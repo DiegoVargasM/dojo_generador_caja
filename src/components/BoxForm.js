@@ -1,10 +1,11 @@
-import { useState } from "react";
+import React, { useState } from 'react';
 
 const BoxForm = (props) => {
 	const [color, setColor] = useState("")
 
 	const handleSubmit = (e) => {
-		e.preventDefault()
+		e.preventDefault();
+		props.onNewColors(color);
 	}
 	return (
 		<form onSubmit={handleSubmit}>
