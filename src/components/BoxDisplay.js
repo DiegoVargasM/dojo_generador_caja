@@ -1,23 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const BoxDisplay = (props) => {
 	return (
 		<>
-			<div>{props.displayedColors}</div>
+			{props.displayedColors.map((color, index) => (
+				<div
+					key={index}
+					style={{
+						backgroundColor: color,
+						width: "20px",
+						height: "20px",
+						display: "inline-block",
+						marginRight: "10px"
+					}}
+				>
+				</div>
+			))}
 		</>
 	)
 }
 
 export default BoxDisplay;
 
-/* const Groceries = (props) => {
-	// esto podría provenir fácilmente de props
-	const groceryList = ["pearl onions", "thyme", "cremini mushrooms", "butter"];
-	return (
-		<ul>{
-			groceryList.map( (item, i) => 
-				<li key={ i }>{ item }</li>
-			)
-		}</ul>
-	); 
-} */

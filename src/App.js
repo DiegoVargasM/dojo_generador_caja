@@ -4,15 +4,15 @@ import BoxForm from './components/BoxForm';
 import BoxDisplay from './components/BoxDisplay';
 
 function App() {
-  const [currentColors, setCurrentColors] = useState("");
+  const [currentColors, setCurrentColors] = useState([]);
 
-  const updateColorList = (newColors) => {
-    setCurrentColors(newColors)
+  const updateColorList = (newColor) => {
+    setCurrentColors([...currentColors, newColor])
   }
 
   return (
     <div className="App">
-      <BoxForm onNewColors={updateColorList} />
+      <BoxForm onNewColor={updateColorList} />
       <BoxDisplay displayedColors={currentColors} />
     </div>
   );
