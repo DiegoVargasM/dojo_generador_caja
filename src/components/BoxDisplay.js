@@ -2,24 +2,22 @@ import React from 'react';
 
 const BoxDisplay = (props) => {
 	return (
-		<>
-			{props.displayedColors.map((color, index) => (
+		<div>
+			{props.displayedBoxes.map((box, index) => (
 				<div
 					key={index}
 					style={{
-						backgroundColor: color,
-						width: "60px",
-						height: "60px",
+						backgroundColor: box.color,
+						width: `${box.width}px`,
+						height: `${box.height}px`,
 						display: "inline-block",
 						marginRight: "10px",
-						padding: "20px",
-						marginTop: "10px"
+						marginTop: "20px",
 					}}
-				>
-				</div>
+				/>
 			))}
-		</>
-	)
+		</div>
+	);
 }
 
 export default BoxDisplay;
